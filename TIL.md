@@ -64,3 +64,29 @@ npm i --save-dev @types/react-beautiful-dnd
   export default React.memo(DraggableCard);
   // DraggableCard의 prop이 변하지 않았다면 DraggableCard를 다시 렌더링하지 않는다.
   ```
+
+# 배열의 loop
+
+- Array.map
+
+# 객체의 loop
+
+Object.keys()
+
+- Object가 가진 eky만 array로 뽑아준다.
+  - 즉, 각각의 property를 돌려준다.
+
+Object.values()
+
+- Object가 가진 value들만 array로 뽑아준다.
+
+```js
+const toDos = {
+  x: ["a", "b"],
+  z: ["n", "t"],
+};
+Object.ekys(toDos); // ["x","z"]
+Object.values(toDos); // [["a","b"], ["n", "t"]];
+Object.keys(toDos).map((boardId) => toDos[boardId]);
+// [["a","b"], ["n", "t"]];
+```
