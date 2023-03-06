@@ -38,3 +38,14 @@ npm i --save-dev @types/react-beautiful-dnd
     - 요소가 기본적으로 드래그 되기를 원한다면 draggableProps를 사용한다.
       - 즉, 요소 전체를 드래그한다.
     - 특정 조건에서 드래그가 되기를 원한다면 dragHandleProps를 사용한다.
+
+# atom
+
+## useRecoilValue
+
+- atom의 값을 가져온다.
+
+## useRecoilState
+
+- atom의 값과 atom을 수정하는 함수를 호출한다.
+- const [atom값, atom을 수정할 함수] = useRecoilState(toDoState)
