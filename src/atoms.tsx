@@ -5,7 +5,7 @@ export const minuteState = atom({
   default: 0,
 });
 
-export const hourSelector = selector({
+export const hourSelector = selector<number>({
   key: "hours",
   get: ({ get }) => {
     // selector의 get함수는 첫 번쨰 argument로 option이라는 object를 가진다.
@@ -13,5 +13,9 @@ export const hourSelector = selector({
     // 개발자가 어떤 값을 return하던지 그 값은 hourSelector의 값이 된다.
     const minutes = get(minuteState);
     return minutes / 60;
+  },
+  set: ({ set }, newValue) => {
+    const minutes = Number(newValue) * 60;
+    set(minuteState, minutes);
   },
 });
