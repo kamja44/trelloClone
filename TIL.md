@@ -24,6 +24,8 @@ npm i --save-dev @types/react-beautiful-dnd
   - provided 매개변수에는 innerRef, placeholder, droppableProps를 갖고 있다.
     - <ul>태그는 provided 매개변수의 droppableProps를 필요로 한다.
     - `<ul {...magic.droppableProps}></ul>`
+    - placeholder 매개변수는 droppable이 끝날 때 사용한다.
+      - placeholder 매개변수를 사용하면 리스트 드래그 시 리스트의 사이즈가 변하는걸 방지할 수 있다.
 
 ## Draggable
 
