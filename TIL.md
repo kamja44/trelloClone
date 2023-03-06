@@ -49,3 +49,18 @@ npm i --save-dev @types/react-beautiful-dnd
 
 - atom의 값과 atom을 수정하는 함수를 호출한다.
 - const [atom값, atom을 수정할 함수] = useRecoilState(toDoState)
+
+# reRendering
+
+- react.js에선 부모의 component의 state를 변경하면 자식의 state도 모두 재렌더링(reRendering) 된다.
+  - application이 느려진다.
+    - react memo를 사용하여 위 현상을 방지한다.
+
+# react memo
+
+- react.js한테 이 component는 렌더링 하지 말라고 알리는 역할을 한다.
+  - 즉, react memo는 react.js에게 prop이 바뀌지 않는다면 컴포넌트를 렌더링 하지 말라고 한다.
+  ```js
+  export default React.memo(DraggableCard);
+  // DraggableCard의 prop이 변하지 않았다면 DraggableCard를 다시 렌더링하지 않는다.
+  ```
