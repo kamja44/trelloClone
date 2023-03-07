@@ -26,6 +26,16 @@ npm i --save-dev @types/react-beautiful-dnd
     - `<ul {...magic.droppableProps}></ul>`
     - placeholder 매개변수는 droppable이 끝날 때 사용한다.
       - placeholder 매개변수를 사용하면 리스트 드래그 시 리스트의 사이즈가 변하는걸 방지할 수 있다.
+- Droppable에서 제공하는 두 번째 argument는 snapshot이다.
+  - snapshot 매개변수는 isDraggingOver, draggingOverWiht, draggingFromThisWith, isUsingPlaceholder가 있다.
+    - isDraggingOver: boolean
+      - 현재 선택한 Droppable이 특정 Droppable뒤에 드래깅 되고 있는지 여부 확인
+    - draggingOverWith: ?DroppableId
+      - Droppable 위로 드래그
+    - draggingFromThisWith: ?DroppableId
+      - 현재 Droppable에서 벗어난 드래깅되고 있는 Droppable ID
+    - isUsingPlaceholder: boolean
+      - placeholder가 사용되고 있는지 여부
 
 ## Draggable
 
@@ -90,3 +100,9 @@ Object.values(toDos); // [["a","b"], ["n", "t"]];
 Object.keys(toDos).map((boardId) => toDos[boardId]);
 // [["a","b"], ["n", "t"]];
 ```
+
+# flex-grow
+
+- flex-item 요소가, flex-container 요소 내부에서 할당 가능한 공간의 정도를 선언한다.
+
+#
