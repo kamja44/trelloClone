@@ -48,6 +48,10 @@ npm i --save-dev @types/react-beautiful-dnd
     - 요소가 기본적으로 드래그 되기를 원한다면 draggableProps를 사용한다.
       - 즉, 요소 전체를 드래그한다.
     - 특정 조건에서 드래그가 되기를 원한다면 dragHandleProps를 사용한다.
+- Draggable에서 제공하는 두 번째 argument는 snapshot이다.
+  - snapshot 매개변수에는 isDragging, isDropAnimating, isClone, dropAnimation, draggingOver, combineWith, combineTargetFor, mode가 있다.
+    - isDraggable: boolean
+      - 드래그중이거나 드롭 애니메이션인 경우 true로 설정한다.
 
 # atom
 
