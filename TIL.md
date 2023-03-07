@@ -109,4 +109,26 @@ Object.keys(toDos).map((boardId) => toDos[boardId]);
 
 - flex-item 요소가, flex-container 요소 내부에서 할당 가능한 공간의 정도를 선언한다.
 
-#
+# ref
+
+- react 코드를 이용하여 HTML 요소를 지정하고, 가져올 수 있는 방법
+  - 즉, 아래 예제의 focus, blue event는 HTMLInputElement가 가지고 있는 이벤트이다.
+
+```js
+  const inputRef = useRef<HTMLInputElement>(null);
+  console.log(inputRef);
+  const onClick = () => {
+    inputRef.current?.focus();
+    setTimeout(() => {
+      inputRef.current?.blur();
+    }, 5000);
+  };
+<input ref={inputRef} placeholder="grab me" />
+<button onClick={onClick}>Click Me</button>
+```
+
+- input에 대한 접근이 가능하다.
+
+# blur()
+
+- focus동작을 지운다.
